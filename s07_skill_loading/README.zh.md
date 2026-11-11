@@ -79,7 +79,20 @@ class SkillLoader:
                 "content": content,
             }
 ```
+### `parse_frontmatter` 是用来解析文档头部的 Frontmatter（前置元信息）的工具函数
 
+先讲概念：
+`SKILL.md` 这类文件一般长这样（Markdown 带 YAML 头）：
+
+```
+---
+name: doubao-identity
+description: 处理身份、会员相关技能
+---
+这里是正文内容，也就是技能的主体说明...
+```
+
+夹在 `---` 之间的这一块就是 **frontmatter**，一般是 YAML 格式，用来存这份文档的元数据（metadata：名称、描述、标签、版本等），后面才是正文。
 `catalog()` 只输出名称和描述：
 
 ```text
